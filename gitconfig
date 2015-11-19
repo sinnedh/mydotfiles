@@ -1,0 +1,40 @@
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    ui = auto
+
+[core]
+    editor = vim
+    pager = less -R
+
+[alias]
+    diverges = !bash -c 'diff -u <(git rev-list --first-parent "${1}") <(git rev-list --first-parent "${2:-HEAD}") | sed -ne \"s/^ //p\" | head -1' -
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+	lg = log --color --graph
+    up = !sh -c 'git pull --rebase --prune && git log --pretty=format:\"%Cred%ae %Creset- %C(yellow)%s %Creset(%ar)\" HEAD@{1}..'
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    ls = ls-files
+    trash = branch -m "${1}" trash/"${1}"
+
+[push]
+    default = current
+
+[pull]
+    ff = only
+
+[merge]
+    tool = vimdiff
+    ff = false
+
+[credential]
+	helper = osxkeychain
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
