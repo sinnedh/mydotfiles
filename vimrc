@@ -48,21 +48,21 @@ map <Leader>j :%!python -m json.tool<CR>
 " ==========================================================
 " Vundle and install bundles
 " ==========================================================
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
 
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
-
+call vundle#begin()
+" let Vundle manage Vundle -- required! 
+" Bundle 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 " The bundles you install will be listed here
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/nerdtree'
-Bundle 'klen/python-mode'
-Bundle 'davidhalter/jedi-vim'
-Bundle 'majutsushi/tagbar'
-Bundle 'kien/ctrlp.vim'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'klen/python-mode'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'kien/ctrlp.vim'
+call vundle#end()
 
 filetype plugin indent on
 
