@@ -20,7 +20,5 @@ fi
 
 alias l="echo; pwd; echo; ll; echo"
 alias v="vim"
-alias pg_config="/Applications/Postgres.app/Contents/Versions/9.3/bin/pg_config"
 alias gti=git
-alias tools="ssh ord-tools-01v"
-
+alias remove_pyc="find . -name '*.pyc' -exec rm -rf {} \;"
