@@ -55,7 +55,6 @@ call vundle#begin()
 " Bundle 'gmarik/vundle'
 Plugin 'VundleVim/Vundle.vim'
 " The bundles you install will be listed here
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'klen/python-mode'
